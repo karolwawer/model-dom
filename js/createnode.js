@@ -56,3 +56,16 @@ document.getElementById('parFirst').appendChild(par1);
 console.log(par1);
 
 parFirst.outerHTML = '<section id="parFirst"><p>lorem ipsum dolor</p></section>';
+
+document.getElementById('three').href = "https://akademia108.pl";
+
+
+console.log(document.getElementById('classList').className);
+document.getElementById('classList').className = 'klasa1 klasa2';
+console.log(document.getElementById('classList').classList);
+document.getElementById('classList').classList.add('klasa_dodana')  ;
+console.log(document.getElementById('classList').classList);
+document.getElementById('classList').classList.remove('klasa2');
+console.log(document.getElementById('classList').classList);
+
+document.getElementById('three').style.color = 'green';
