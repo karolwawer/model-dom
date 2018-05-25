@@ -3,6 +3,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     //    console.log('123');
     linksHover();
+    changeBodyBG();
+    writeInputOutput()
 })
 
 function linksHover() {
@@ -19,4 +21,19 @@ function linksHover() {
             this.style.color = 'green';
         });
     };
+}
+
+function changeBodyBG() {
+    document.addEventListener('keypress', function(){
+        document.body.style.backgroundColor = 'beige';
+    })
+}
+
+function writeInputOutput() {
+    let inputs = document.querySelectorAll('#form input');
+    for(let i =0; i <inputs.length; i++) {
+        inputs[i].addEventListener('change', function(){
+            document.getElementById('wynik').innerHTML += this.value + ' ';
+        });
+    }
 }
